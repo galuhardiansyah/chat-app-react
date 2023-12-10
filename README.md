@@ -2,9 +2,9 @@
 - 10 December 2023
 
 ○ Instructions to run assignment locally
- - go to client and run npm run dev.
  - run mongod
  - dont forget to make a database, i am using chatapp as the name for database.
+ - go to client and run npm run dev.
  - go to server and run node server.
 
 ○ Time spent
