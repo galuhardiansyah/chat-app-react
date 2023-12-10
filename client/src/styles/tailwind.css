@@ -1,0 +1,57 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.message-container {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+
+  /* Webkit (Chrome, Safari, Opera) */
+  &::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the thumb */
+    border-radius: 4px;
+  }
+}
+
+/* Hover effect for Webkit browsers */
+.message-container:hover::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+}
+
+/* When scrolling, show a transparent scrollbar thumb */
+.message-container:scroll::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.speech{
+  position: relative;
+}
+
+.speech::after {
+  position: absolute;
+  display: block; width: 0; content: "";
+  border: 15px solid transparent;
+}
+
+.speech.down-left::after {
+  bottom: -15px;
+  left: 0;
+  border-top-color: #F6F6F6;
+  border-bottom: 0;
+  border-left: 0;
+  height: 17px;
+}
+
+.speech.down-right::after {
+  bottom: -15px;
+  right: 0;
+  border-top-color: #5DB075;
+  border-bottom: 0;
+  border-right: 0;
+  height: 17px;
+}
+
